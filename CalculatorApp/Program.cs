@@ -1,10 +1,12 @@
 using CalculatorApp.Components;
+using CalculatorApp.Services;
 using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services
+    .AddScoped<CalculatorService>()
     .AddMudServices()
     .AddRazorComponents()
     .AddInteractiveServerComponents();
