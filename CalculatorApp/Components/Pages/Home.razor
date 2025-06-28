@@ -1,3 +1,7 @@
 ﻿@page "/"
 
+@inject CalculatorService CalculatorService;
+
 <PageTitle>Calculator App</PageTitle>
+
+<MudTextField Value="@CalculatorService.CurrentValue" ReadOnly="true" />
