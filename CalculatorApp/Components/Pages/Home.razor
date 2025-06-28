@@ -4,4 +4,31 @@
 
 <PageTitle>Calculator App</PageTitle>
 
-<MudTextField Value="@CalculatorService.CurrentValue" ReadOnly="true" />
+<MudStack>
+    <MudTextField Value="@CalculatorService.CurrentValue" ReadOnly="true" />
+    <MudStack Row="true">
+        <MudButton>0</MudButton>
+        <MudButton>1</MudButton>
+        <MudButton>2</MudButton>
+        <MudButton>3</MudButton>
+    </MudStack>
+    <MudStack Row="true">
+        <MudButton>4</MudButton>
+        <MudButton>5</MudButton>
+        <MudButton>6</MudButton>
+        <MudButton>7</MudButton>
+    </MudStack>
+    <MudStack Row="true">
+        <MudButton>8</MudButton>
+        <MudButton>9</MudButton>
+        <MudButton>+</MudButton>
+        <MudButton>-</MudButton>
+    </MudStack>
+    <MudStack Row="true">
+        <MudButton>*</MudButton>
+        <MudButton>/</MudButton>
+        <MudButton>=</MudButton>
+        <MudButton>C</MudButton>
+        <MudButton>AC</MudButton>
+    </MudStack>
+</MudStack>
