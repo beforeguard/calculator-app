@@ -7,20 +7,20 @@
 <MudStack>
     <MudTextField Value="@CalculatorService.CurrentValue" ReadOnly="true" />
     <MudStack Row="true">
-        <MudButton>0</MudButton>
-        <MudButton>1</MudButton>
-        <MudButton>2</MudButton>
-        <MudButton>3</MudButton>
+        <MudButton OnClick="@((args) => OnButtonClick("0"))">0</MudButton>
+        <MudButton OnClick="@((args) => OnButtonClick("1"))">1</MudButton>
+        <MudButton OnClick="@((args) => OnButtonClick("2"))">2</MudButton>
+        <MudButton OnClick="@((args) => OnButtonClick("3"))">3</MudButton>
     </MudStack>
     <MudStack Row="true">
-        <MudButton>4</MudButton>
-        <MudButton>5</MudButton>
-        <MudButton>6</MudButton>
-        <MudButton>7</MudButton>
+        <MudButton OnClick="@((args) => OnButtonClick("4"))">4</MudButton>
+        <MudButton OnClick="@((args) => OnButtonClick("5"))">5</MudButton>
+        <MudButton OnClick="@((args) => OnButtonClick("6"))">6</MudButton>
+        <MudButton OnClick="@((args) => OnButtonClick("7"))">7</MudButton>
     </MudStack>
     <MudStack Row="true">
-        <MudButton>8</MudButton>
-        <MudButton>9</MudButton>
+        <MudButton OnClick="@((args) => OnButtonClick("8"))">8</MudButton>
+        <MudButton OnClick="@((args) => OnButtonClick("9"))">9</MudButton>
         <MudButton>+</MudButton>
         <MudButton>-</MudButton>
     </MudStack>
@@ -32,3 +32,7 @@
         <MudButton>AC</MudButton>
     </MudStack>
 </MudStack>
+
+@code {
+    private void OnButtonClick(string value) => CalculatorService.AppendDigit(int.Parse(value));
+}
